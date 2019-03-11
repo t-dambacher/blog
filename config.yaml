@@ -1,0 +1,72 @@
+baseURL: https://www.dambacher.fr/
+title: Thibaut's website
+
+languageCode: en-US
+defaultContentLanguage: en
+
+publishDir: publication
+
+buildDrafts: false
+canonifyUrls: true
+enableEmoji: true
+summaryLength: 200
+paginate: 3
+
+theme: AllinOne
+
+pygmentsUseClasses: true
+pygmentsStyle: vs
+
+# privacy: disable everything
+privacy:
+    disqus:
+        disable: true
+    googleAnalytics:
+        disable: true
+    instagram:
+        disable: true
+    twitter:
+        disable: true
+    vimeo:
+        disable: true
+    youtube:
+        disable: true
+
+# theme-specific config
+params:
+    author: Hi, it's me, Thibaut ! 
+    faviconFile: images/todo.ico
+    avatar: images/itsme.jpg
+    
+    lastPostsCount: 5
+    highlightJs: true
+    katex: true
+    include_rss: true
+    
+    # socials
+    email: contact@dambacher.fr
+    github: //github.com/t-dambacher
+    linkedIn: //www.linkedin.com/in/thibaut-dambacher
+    
+    # slides
+    slidesDirPath: static/images/header-slides
+    slidesDirPathURL: img/header-slides
+
+permalinks:
+    blog: "blog/:year-:month/:slug/" 
+
+taxonomies:
+    tag: "tags"
+    category: "categories"
+
+menu:
+    main: 
+        -   name: "Blog"
+            weight: -120
+            identifier: blog
+            url: "blog/"
+        
+        -   name: "Resume"
+            weight: -110
+            identifier: resume
+            url: "resume/"
