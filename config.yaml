@@ -58,6 +58,7 @@ permalinks:
 taxonomies:
     tag: "tags"
     category: "categories"
+    series: "series"
 
 menu:
     main: 
@@ -66,7 +67,7 @@ menu:
             identifier: blog
             url: "blog/"
         
-        -   name: "Resume"
+        -   name: "About"
             weight: -110
-            identifier: resume
-            url: "resume/"
+            identifier: about
+            url: "about/"
