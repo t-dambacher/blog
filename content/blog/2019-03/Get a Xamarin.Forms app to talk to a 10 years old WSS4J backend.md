@@ -1,10 +1,10 @@
 ---
-date: "2018-01-30T20:21:13+08:00"
-draft: false 
-title: "Blabla titre test"
-tags: ["testtag"]
-series: ["test serie"]
-categories: ["test"]
+date: "2019-03-18T15:00:00+02:00"
+draft: true 
+title: "Get a Xamarin.Forms app to talk to a 10 years old WSS4J backend"
+tags: ["Xamarin", "Xamarin.Forms", "WSS4J", ".NET", "Mobile"]
+series: []
+categories: ["Developement"]
 toc: true
 ---
 

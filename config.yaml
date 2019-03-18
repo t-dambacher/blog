@@ -1,12 +1,12 @@
 baseURL: https://blogtdambacher.z28.web.core.windows.net/
-title: Thibaut's website
+title: Thibaut's blog
 
 languageCode: en-US
 defaultContentLanguage: en
 
 publishDir: publication
 
-buildDrafts: false
+buildDrafts: true
 canonifyUrls: true
 enableEmoji: true
 summaryLength: 200
@@ -47,6 +47,7 @@ params:
     email: contact@dambacher.fr
     github: //github.com/t-dambacher
     linkedIn: //www.linkedin.com/in/thibaut-dambacher
+    soundcloud: //soundcloud.com/lastsunsetonuranus
     
     # slides
     slidesDirPath: static/images/header-slides
@@ -67,7 +68,7 @@ menu:
             identifier: blog
             url: "blog/"
         
-        -   name: "About"
+        -   name: "Resume"
             weight: -110
             identifier: about
-            url: "about/"
+            url: "resume/"
