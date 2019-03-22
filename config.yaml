@@ -35,8 +35,8 @@ privacy:
 # theme-specific config
 params:
     author: Hi, it's me, Thibaut ! 
-    faviconFile: images/todo.ico
-    avatar: images/itsme.jpg
+    faviconFile: img/todo.ico
+    avatar: img/itsme.jpg
     
     lastPostsCount: 5
     highlightJs: true
@@ -50,7 +50,7 @@ params:
     soundcloud: //soundcloud.com/lastsunsetonuranus
     
     # slides
-    slidesDirPath: static/images/header-slides
+    slidesDirPath: static/img/header-slides
     slidesDirPathURL: img/header-slides
 
 permalinks:
