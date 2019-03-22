@@ -1,0 +1,35 @@
+{
+    "title": "Senior .NET engineer",
+    "expertise": [
+        { 
+            "type": "Langages",
+            "content": [ "C#", "TypeScript", "Javascript", "HTML5", "CSS3", "PHP7" ]
+        },
+        {
+            "type": "Systèmes",
+            "content": [ "Windows", "Linux" ]
+        },
+        {
+            "type": "Outils de développement / Intégration",
+            "content": [ "Visual Studio", "Visual Studio Code", "SonarQube", "NuGet" ]
+        },
+        {
+            "type": "Système et Base de données",
+            "content": [ "SqlServer", "Oracle", "SQLite" ]
+        },
+        {
+            "type": "Conception",
+            "content": [ "UML" ]
+        },
+        {
+            "type": "Méthodes et cycles de développement",
+            "content": [ "Agile", "Scrum", "Kanban", "Cycle en V" ]
+        }
+    ],
+    "experience": [
+        {}
+    ],
+    "education": [
+        {}
+    ]
+}

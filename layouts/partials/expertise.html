@@ -1,0 +1,11 @@
+<div class='post-heading'>Expertise</div>
+<div>
+    {{ range $.Site.Data.resume.expertise }}
+        {{ .type }}   
+        <ul>
+            {{ range .content }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+    {{ end }}
+</div>

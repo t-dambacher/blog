@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <main class="post-main-wrapper px-5">
+        <div class="row">
+            <div class="container content mt-3">
+                <div class='post-heading'>{{ .Site.Data.resume.title }}</div>
+                <div class="post-content">
+                    <div>
+                        {{ partial "expertise.html" . }}
+                    </div>
+                    <div>
+                        {{ partial "experience.html" . }}
+                    </div>
+                    <div>
+                        {{ partial "education.html" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{{ end }}

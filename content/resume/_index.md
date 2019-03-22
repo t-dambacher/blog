@@ -1,13 +1,5 @@
 +++
-date = "2019-03-18"
+date = "2019-03-22T11:22:00+01:00"
 draft = true
-title = "Senior .NET Engineer"
+title = "Resume"
 +++
-
-### Expertise
-
-### Professional experience
-
-### Education
-  2005  Baccalauréat scientifique, option Sciences et Vie de la Terre, spécialité Mathématiques
-        Lycée Adrien Zeller, Bouxwiller
