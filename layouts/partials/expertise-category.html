@@ -1,0 +1,13 @@
+<div class="expertise-category">
+    <div class="font-weight-bold text-uppercase post-meta">{{ .category }}</div>
+    <div class="expertise-content">
+        {{ range .content }}
+            <div class="li-x tags-md">
+                <span class="font-weight-bold link expertise-type">{{ .type }} : </span>
+                {{ range .values }}
+                    <li><a><span>{{ . }}</span></a></li>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>

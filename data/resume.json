@@ -1,29 +1,95 @@
 {
-    "title": "Senior .NET engineer",
+    "title": "Senior .NET Engineer",
     "expertise": [
-        { 
-            "type": "Langages",
-            "content": [ "C#", "TypeScript", "Javascript", "HTML5", "CSS3", "PHP7" ]
+        {
+            "category": "Développement",
+            "content": [
+                {
+                    "type": ".NET",
+                    "values": [ "C#", "ASP.NET", ".NET Standard", ".NET Core" ]
+                },
+                {
+                    "type": "Databases",
+                    "values": [ "SQL Server", "Oracle", "SQLite" ]
+                },
+                {
+                    "type": "ORM",
+                    "values": [ "EF6", "EF Core", "NHibernate" ]
+                },
+                {
+                    "type": "Frontend",
+                    "values": [ "HTML5", "CSS3", "Javascript", "TypeScript" ] 
+                },
+                {
+                    "type": "Web",
+                    "values": [ "ASP.NET", "ASP.NET Core", "Vue.js", "Angular" ]
+                },
+                {
+                    "type": "Mobile",
+                    "values": [ "Xamarin.Forms" ]
+                },
+                {
+                    "type": "Tests",
+                    "values": [ "MSTest", "NUnit", "Selenium" ]
+                },
+                {
+                    "type": "Scripting",
+                    "values": [ "Cake.NET", "Powershell", "NAnt" ]
+                },
+                {
+                    "type": "CI/CD",
+                    "values": [ "SonarQube", "NuGet", "CruiseControl.NET" ]
+                },
+                {
+                    "type": "Versioning",
+                    "values": [ "Git", "SVN" ]
+                },
+                {
+                    "type": "Misc",
+                    "values": [ "PHP", "C", "C++", "Java", "VB.NET" ]
+                }
+            ]
         },
         {
-            "type": "Systèmes",
-            "content": [ "Windows", "Linux" ]
+            "category": "Technical",
+            "content": [
+                {
+                    "type": "OS",
+                    "values": [ "Windows", "Linux", "MacOS", "iOS", "Android" ]
+                },
+                {
+                    "type": "Cloud",
+                    "values": [ "Azure" ]
+                },
+                {
+                    "type": "System",
+                    "values": [ "LDAP/AD", "Exchange" , "Basis of networking and system administration" ]
+                }
+            ]
         },
         {
-            "type": "Outils de développement / Intégration",
-            "content": [ "Visual Studio", "Visual Studio Code", "SonarQube", "NuGet" ]
+            "category": "Projects",
+            "content": [
+                {
+                    "type": "Project management",
+                    "values": [ "Agile (Scrum & Kanban)", "Waterfall", "ITIL", "PERT" ]
+                },
+                {
+                    "type": "Conception",
+                    "values": [ "UML" ]
+                },
+                {
+                    "type": "Tools",
+                    "values": [ "Visual Studio", "Visual Studio Code" ]
+                }
+            ]
         },
         {
-            "type": "Système et Base de données",
-            "content": [ "SqlServer", "Oracle", "SQLite" ]
-        },
-        {
-            "type": "Conception",
-            "content": [ "UML" ]
-        },
-        {
-            "type": "Méthodes et cycles de développement",
-            "content": [ "Agile", "Scrum", "Kanban", "Cycle en V" ]
+            "category": "Languages",
+            "content": [
+                { "type": "English", "values": [ "Fluent"] },
+                { "type": "German", "values": [ "Notions"] }
+            ]
         }
     ],
     "experience": [

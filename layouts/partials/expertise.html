@@ -1,11 +1,13 @@
-<div class='post-heading'>Expertise</div>
-<div>
-    {{ range $.Site.Data.resume.expertise }}
-        {{ .type }}   
-        <ul>
-            {{ range .content }}
-            <li>{{ . }}</li>
-            {{ end }}
-        </ul>
-    {{ end }}
+<h4>Expertise</h4>
+<div class="row expertise">
+    <div class="col-md-6 first-column">
+        {{ range first 1 $.Site.Data.resume.expertise }}
+            {{ partial "expertise-category" . }}
+        {{ end }}
+    </div>
+    <div class="col-md-6">
+        {{ range after 1 $.Site.Data.resume.expertise }}
+        {{ partial "expertise-category" . }}
+        {{ end }}
+    </div>
 </div>
