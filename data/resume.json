@@ -96,6 +96,26 @@
         {}
     ],
     "education": [
-        {}
+        {
+            "when": "2008 - 2011",
+            "content": "Ingénieur généraliste à dominante informatique",
+            "more": "Cursus effectué en alterance",
+            "location": "Ecole Supérieure d'Ingénieurs en Génie Electrique (ESIGELEC), Rouen"
+        },
+        {
+            "when": "2007 - 2008",
+            "content": "Licence informatique, option Réseaux Informatiques et Applications",
+            "location": "Université de Strasbourg"
+        },
+        {
+            "when": "2005 - 2007",
+            "content": "DUT Informatique",
+            "location": "IUT Robert Schuman, Strasgbourg"
+        },
+        {
+           "when": "2005",
+           "content": "Baccalauréat scientifique, option Sciences et Vie de la Terre, spécialité Mathématiques",
+           "location": "Lycée Adrien Zeller, Bouxwiller"
+        }
     ]
 }

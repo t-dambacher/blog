@@ -1,4 +1,17 @@
 <h4>Education</h4>
-<div>
-    
+<div class="row education">
+    {{ range $.Site.Data.resume.education }}
+        <div class="col-md-2 font-weight-bold text-uppercase post-meta first-column">{{ .when }}</div>
+        <div class="col-md-10 li-x tags-md">
+            <div>
+                <span class="font-weight-bold link expertise-type">{{ .content }}</span>
+            </div>
+            <div>
+                <li><a><span class="font-weight-bold">{{ .location }}</span></a></li>
+                {{ if .more }}
+                <span class="size12">{{ .more }}</span>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
 </div>

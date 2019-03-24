@@ -2,7 +2,7 @@
     color: var(--active-color);
 }
 
-.first-column div.expertise-category {
+.first-column div {
     padding-left: 10px;
 }
 
@@ -28,11 +28,20 @@ span.expertise-type {
     content: "";
 }
 
-.expertise .tags-md li {
+.expertise .tags-md li, .education .tags-md li {
     padding: 4px 3px 4px 0px;
 }
 
-.expertise .tags-md a {
+.expertise .tags-md a, .education .tags-md a {
     padding: 0;
     border-width: 0px;
+}
+
+.expertise .tags-md a:hover, .education .tags-md a:hover {
+    border-width: 0px;  
+    border-radius: unset !important;
+}
+
+.size12 {
+    font-size: 12px;
 }
