@@ -5,7 +5,7 @@ title: "Get a Xamarin.Forms app to talk to a 10 years old WSS4J backend"
 tags: ["Xamarin", "Xamarin.Forms", "WSS4J", ".NET", "Mobile"]
 series: []
 categories: ["Developement"]
-toc: true
+toc: false
 ---
 
 +++
@@ -148,9 +148,3 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-
-| Version | Action                   | Time       |
-| ------- | ------------------------ | ---------- |
-| 1.0     | Init                     | 2018-01-30 |
-| 1.1     | Finder  			     | 2018-02-14 |
-| 1.2     | Blabla                   | 2018-03-07 |
