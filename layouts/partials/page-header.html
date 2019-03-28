@@ -4,8 +4,6 @@
 {{ $files := readDir $path  }}
 {{ $files := where $files  "Name" "ne" ".DS_Store" }}
 
-<link rel="stylesheet" href="/style/custom.css">
-
 <!--Carousel Wrapper-->
 <div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  <!--data-pause="true" data-interval="300000"-->
 

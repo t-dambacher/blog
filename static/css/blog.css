@@ -1,0 +1,15 @@
+
+@media all and (max-width: 500px) {
+    .post-main-wrapper {
+        margin: 1rem 0 0 0;
+    }
+
+    .post-main-wrapper > .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .post-header div.post-heading {
+        padding-left: 0 !important;
+    }
+}
