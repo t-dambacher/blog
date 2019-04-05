@@ -63,12 +63,12 @@ taxonomies:
 
 menu:
     main: 
-        -   name: "Blog"
+        -   name: "The blog"
             weight: -120
             identifier: blog
             url: "blog/"
         
-        -   name: "Resume"
+        -   name: "About"
             weight: -110
             identifier: about
-            url: "resume/"
+            url: "about/"

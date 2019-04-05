@@ -1,5 +1,5 @@
 ---
-date: "2019-03-18T15:00:00+02:00"
+date: "2019-05-18T15:00:00+02:00"
 draft: true 
 title: "Get a Xamarin.Forms app to talk to a 10 years old WSS4J backend"
 tags: ["Xamarin", "Xamarin.Forms", "WSS4J", ".NET", "Mobile"]

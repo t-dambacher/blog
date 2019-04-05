@@ -1,3 +1,6 @@
+.post-wrapper {
+    text-align: justify !important;
+}
 
 @media all and (max-width: 500px) {
     .post-main-wrapper {
