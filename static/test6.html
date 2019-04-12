@@ -141,7 +141,7 @@ Aside from the pure development stuff, part of my job is to preach and teach the
    
     </header>
    
-    <main class="post-main-wrapper">
+    <div class="post-main-wrapper">
       <div class="row">
         <div class="container pr-5">
           <div class="z-depth-1  post-wrapper white-bg single-post">
@@ -156,7 +156,7 @@ Aside from the pure development stuff, part of my job is to preach and teach the
                   <li>6 minutes read</li>
                 </ul>
               </div>
-              <div class="post-content markdown">
+              <article class="post-content markdown">
                 <p>Hi! Welcome to my blog! This is my first post <em>ever</em>, so please be understanding! As a first simple exercice, I thought I could start by introducing myself briefly, and talk a bit about how my blog is powered.</p>
                 <h3 id="me-myself-i">Me, myself &amp; I</h3>
                 <p>Ok so first things first, let me introduce myself. My name is Thibaut, I&rsquo;m a french guy living near Strasbourg, in France. Aside from wine, cheese and baguettes (obviously), I love computers and science.<br />I alsco love music, listening to it, playing it, and recording it. In fact, I play guitar and piano in a little band called <a href="https://soundcloud.com/lastsunsetonuranus"><em>Last Sunset On Uranus</em></a> (yes, our name is a bad joke 😄). Come check us out!</p>
@@ -177,39 +177,39 @@ Aside from the pure development stuff, part of my job is to preach and teach the
                 <li>An Azure CDN is used as a safe net just in case one day, thousand of people will read me. More seriously, it&rsquo;s where the SSL certificate is defined, automatically. A rule also redirects some requests to HTTPS.</li>
                 <li>Finally, the domain I use to hide all the partially ugly URLs is registered to <a href="https://ovh.com">OVH</a>, and is also configured to do some <em>http to https</em> redirection at the domain level.</li>
                 </ul>
-              <p>The best thing is that all of this has been deployed in less than a day, without much issues. I only encountered some problems with the <em>http to https</em> redirection and only because I wasn&rsquo;t patient enough, as the DNS weren&rsquo;t propagating as fast as I would have wanted. Once I waited a bit, it all worked great.</p>
-              <p>It also didn&rsquo;t cost much, as the one and only thing I need to pay for is the domain. The Azure subscription works in a <em>pay as you go</em> manner, which means that I pay based on the consumption of what is deployed in Azure. The Storage is charged based on the size of my files, and costs 0,002€ per GB per month; as I only have a few KB of text and MB of images, it&rsquo;s basically free. The CDN is charged based on the volume of data transferred to the consummers of the CDN endpoints, so the more visits my blog have, the more it costs me, at something like 0,2€ per GB per month. As long as I&rsquo;m not famous, it&rsquo;s basically free.</p>
-              <p>So here you have, I&rsquo;m <em>blogging for pennies</em>. What really excites me is the whole <em>cloud</em> and <em>open-source</em> logic: there isn&rsquo;t anything on my side, no physical machine, no backup, no static IP, no database. There&rsquo;s no SaaS CMS (think <em>Wordpress</em>) either. Just free softwares, inteconnected and working only when needed, and the underlying stuff is deported to cloud providers, and is hopefully optimised to do things in an efficient manner. I can only imagine what can be done with such a modern architecture on a more complex app. It&rsquo;s a great time to be a developer!</p>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="mb-5">
-                  <div class="li-x div-x post-meta">
-                    <li class="pr-0"><a href="https://www.dambacher.fr/tags/"><i class="fas fa-tags"></i></a></li>
-                    <div class="tags-sm">
-                      <li><a href="https://www.dambacher.fr/tags/azure" role="button">Azure </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/introduction" role="button">Introduction </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/static-website" role="button">Static website </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/blog" role="button">Blog </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/blob-storage" role="button">Blob storage </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/storage" role="button">Storage </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/cdn" role="button">CDN </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/hugo" role="button">Hugo </a></li>
+                <p>The best thing is that all of this has been deployed in less than a day, without much issues. I only encountered some problems with the <em>http to https</em> redirection and only because I wasn&rsquo;t patient enough, as the DNS weren&rsquo;t propagating as fast as I would have wanted. Once I waited a bit, it all worked great.</p>
+                <p>It also didn&rsquo;t cost much, as the one and only thing I need to pay for is the domain. The Azure subscription works in a <em>pay as you go</em> manner, which means that I pay based on the consumption of what is deployed in Azure. The Storage is charged based on the size of my files, and costs 0,002€ per GB per month; as I only have a few KB of text and MB of images, it&rsquo;s basically free. The CDN is charged based on the volume of data transferred to the consummers of the CDN endpoints, so the more visits my blog have, the more it costs me, at something like 0,2€ per GB per month. As long as I&rsquo;m not famous, it&rsquo;s basically free.</p>
+                <p>So here you have, I&rsquo;m <em>blogging for pennies</em>. What really excites me is the whole <em>cloud</em> and <em>open-source</em> logic: there isn&rsquo;t anything on my side, no physical machine, no backup, no static IP, no database. There&rsquo;s no SaaS CMS (think <em>Wordpress</em>) either. Just free softwares, inteconnected and working only when needed, and the underlying stuff is deported to cloud providers, and is hopefully optimised to do things in an efficient manner. I can only imagine what can be done with such a modern architecture on a more complex app. It&rsquo;s a great time to be a developer!</p>
+              </article>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mb-5">
+                    <div class="li-x div-x post-meta">
+                      <li class="pr-0"><a href="https://www.dambacher.fr/tags/"><i class="fas fa-tags"></i></a></li>
+                      <div class="tags-sm">
+                        <li><a href="https://www.dambacher.fr/tags/azure" role="button">Azure </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/introduction" role="button">Introduction </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/static-website" role="button">Static website </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/blog" role="button">Blog </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/blob-storage" role="button">Blob storage </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/storage" role="button">Storage </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/cdn" role="button">CDN </a></li>
+                        <li><a href="https://www.dambacher.fr/tags/hugo" role="button">Hugo </a></li>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row pt-3">
-            <div class="col-md-6">
-            </div>
+            <div class="row pt-3">
+              <div class="col-md-6">
+              </div>
               <div class="col-md-6 text-right" >
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
     <footer class="page-footer text-center font-small mt-4 wow fadeIn">
       <div class="pb-2 mt-5 pt-5">
