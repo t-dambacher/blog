@@ -141,75 +141,37 @@ Aside from the pure development stuff, part of my job is to preach and teach the
    
     </header>
    
-    <div class="post-main-wrapper">
+    <main class="post-main-wrapper">
       <div class="row">
         <div class="container pr-5">
-          <div class="z-depth-1  post-wrapper white-bg single-post">
-            <div class="post-header text-center">
-              <ul class="post-meta li-x">
-                <li><a href="https://www.dambacher.fr/categories/other"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Other </a></li>
-              </ul>
-              <div class="px-4 post-heading">My first baby step</div>
-                <ul class="post-meta li-x mt-1">
-                  <li>Apr 3, 2019</li>
-                  <li class="middot"></li>
-                  <li>6 minutes read</li>
-                </ul>
-              </div>
-              <main class="post-content markdown">
-                <p>Hi! Welcome to my blog! This is my first post <em>ever</em>, so please be understanding! As a first simple exercice, I thought I could start by introducing myself briefly, and talk a bit about how my blog is powered.</p>
-                <h3 id="me-myself-i">Me, myself &amp; I</h3>
-                <p>Ok so first things first, let me introduce myself. My name is Thibaut, I&rsquo;m a french guy living near Strasbourg, in France. Aside from wine, cheese and baguettes (obviously), I love computers and science.<br />I alsco love music, listening to it, playing it, and recording it. In fact, I play guitar and piano in a little band called <a href="https://soundcloud.com/lastsunsetonuranus"><em>Last Sunset On Uranus</em></a> (yes, our name is a bad joke 😄). Come check us out!</p>
-                <p>On the IT side, I recently started a new gig as a senior .NET engineer in a <a href="https://twitter.com/sfeir">consulting firm</a>. Time to say the boring stuff: as this is my own private blog and not a corporate one, my opinions are mine only and do not reflect in any way my employer&rsquo;s. Ok, done.</p>
-                <p>Aside from the pure development stuff, part of my job is to preach and teach the best practices, and help our individuals grow, and our teams to scale. I read blogs daily, and for once want to be part of the blogosphere too, and log my thoughts somewhere. On a more personal note, I want to try to give something back to the community. I am considering participating in some open source projects, but that&rsquo;s not nearly clear enough for now. Anyway, this is the reasons I am starting this blog, as a way to store in the open what I have learned. And if it could even help someone someday, it would be a great reward.</p>
-                <p>Ok, enough with this, let&rsquo;s talk tech!</p>
-                <h3 id="the-blog-s-stack">The blog&rsquo;s stack</h3>
-                <p>I&rsquo;ve come accross a great post by Matt Fisher, very appropriately called  <em><a href="https://blog.bacongobbler.com/post/2018-03-09-blogging-for-pennies-on-azure/index.html">Blogging for pennies on Azure</a></em>. As the title says it, Matt explains how to host a blog on Azure, and I pretty much followed his tutorial to get this site up.</p>
-                <p>In brief, this is how it all work :</p>
-                <ul>
-                <li>The blog&rsquo;s content is stored as markdown files. There isn&rsquo;t a database where I put my thoughts through a WYSIWYG interface, nor HTML pages with static content included and edited by hand. I&rsquo;m writing it through VS Code with the mardown preview enabled, but any editor works. <a href="https://github.com/t-dambacher/blog/blob/master/content/blog/2019-04/introducing.md">Here is even the content</a> of this very own post!
-                <img src="https://www.dambacher.fr/img/blog/thats-not-enough-we-need-to-go-deeper.jpg" alt="Blog-ception" title="Blog-ception" class="mx-auto d-block" style="width: 50%;"></li>
-                <li>I use Github to store the content. This allows me to have all benefits of a distributed VCS: I can write from anywhere (like the bathtub), save what I&rsquo;ve written, and continue the next day on another computer. I&rsquo;ll forever have access to all revisions and could see what changed. I&rsquo;m even able to ask someone to proof-read me before publishing in a <em>code reviews</em> fashion, with a pull request. For a techie, this is a great way to work!</li>
-                <li>Once written, the content goes through <a href="https://gohugo.io/">Hugo</a>, a <em>static website generator</em>. This means that my blog is fully static and does not need a backend with a runtime to interact with. Hugo is the CMS-like part, where I define the visual style of my blog, and create reusable layouts and partial views. As it&rsquo;s <em>very</em> fast to generate the output, I can see the result of my work instantly.<br />
-                Hugo comes with a lot of features and templates, so you can start blogging quickly and don&rsquo;t have to start from scratch; those template are also available on Github, and I reference mine as a submodule, so I&rsquo;m able to get the new changes automatically on checkout.</li>
-                <li>I added <em>Continuous Delivery</em> support through an Azure Pipeline, which triggers a full build at each commit on the <em>master</em> branch of the blog&rsquo;s git repository. Azure checks out the full content, runs it through Hugo, and pushes the generated html and the other resources to an Azure Storage Account through the <code>AzCopy</code> command line tool.</li>
-                <li>The data are stored in Blob Storage, which is a cloud mechanism to store any data in binary blobs. The files are typically manipulated through a REST API, but Microsoft added a feature called <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website-host"><em>static website</em></a>, which allows the download of a file with a standard GET request instead of posting some JSON to a REST endpoint. It also allows the use of a default file while querying the account&rsquo;s endpoint, so when someone make a request to <code>myfunnyblog.onazure.blabla.com</code>, instead of returning a 404 as this isn&rsquo;t an URL pointing to a file, it returns the default <code>index.html</code> file. Put in other words, the <em>static website</em> feature simply allows a browser to access the files.</li>
-                <li>An Azure CDN is used as a safe net just in case one day, thousand of people will read me. More seriously, it&rsquo;s where the SSL certificate is defined, automatically. A rule also redirects some requests to HTTPS.</li>
-                <li>Finally, the domain I use to hide all the partially ugly URLs is registered to <a href="https://ovh.com">OVH</a>, and is also configured to do some <em>http to https</em> redirection at the domain level.</li>
-                </ul>
-              <p>The best thing is that all of this has been deployed in less than a day, without much issues. I only encountered some problems with the <em>http to https</em> redirection and only because I wasn&rsquo;t patient enough, as the DNS weren&rsquo;t propagating as fast as I would have wanted. Once I waited a bit, it all worked great.</p>
-              <p>It also didn&rsquo;t cost much, as the one and only thing I need to pay for is the domain. The Azure subscription works in a <em>pay as you go</em> manner, which means that I pay based on the consumption of what is deployed in Azure. The Storage is charged based on the size of my files, and costs 0,002€ per GB per month; as I only have a few KB of text and MB of images, it&rsquo;s basically free. The CDN is charged based on the volume of data transferred to the consummers of the CDN endpoints, so the more visits my blog have, the more it costs me, at something like 0,2€ per GB per month. As long as I&rsquo;m not famous, it&rsquo;s basically free.</p>
-              <p>So here you have, I&rsquo;m <em>blogging for pennies</em>. What really excites me is the whole <em>cloud</em> and <em>open-source</em> logic: there isn&rsquo;t anything on my side, no physical machine, no backup, no static IP, no database. There&rsquo;s no SaaS CMS (think <em>Wordpress</em>) either. Just free softwares, inteconnected and working only when needed, and the underlying stuff is deported to cloud providers, and is hopefully optimised to do things in an efficient manner. I can only imagine what can be done with such a modern architecture on a more complex app. It&rsquo;s a great time to be a developer!</p>
-              </main>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="mb-5">
-                  <div class="li-x div-x post-meta">
-                    <li class="pr-0"><a href="https://www.dambacher.fr/tags/"><i class="fas fa-tags"></i></a></li>
-                    <div class="tags-sm">
-                      <li><a href="https://www.dambacher.fr/tags/azure" role="button">Azure </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/introduction" role="button">Introduction </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/static-website" role="button">Static website </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/blog" role="button">Blog </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/blob-storage" role="button">Blob storage </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/storage" role="button">Storage </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/cdn" role="button">CDN </a></li>
-                      <li><a href="https://www.dambacher.fr/tags/hugo" role="button">Hugo </a></li>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-3">
-            <div class="col-md-6">
-            </div>
-              <div class="col-md-6 text-right" >
-              </div>
-            </div>
-          </div>
+          <article class="post-content markdown">
+            <p>Hi! Welcome to my blog! This is my first post <em>ever</em>, so please be understanding! As a first simple exercice, I thought I could start by introducing myself briefly, and talk a bit about how my blog is powered.</p>
+            <h3 id="me-myself-i">Me, myself &amp; I</h3>
+            <p>Ok so first things first, let me introduce myself. My name is Thibaut, I&rsquo;m a french guy living near Strasbourg, in France. Aside from wine, cheese and baguettes (obviously), I love computers and science.<br />I alsco love music, listening to it, playing it, and recording it. In fact, I play guitar and piano in a little band called <a href="https://soundcloud.com/lastsunsetonuranus"><em>Last Sunset On Uranus</em></a> (yes, our name is a bad joke 😄). Come check us out!</p>
+            <p>On the IT side, I recently started a new gig as a senior .NET engineer in a <a href="https://twitter.com/sfeir">consulting firm</a>. Time to say the boring stuff: as this is my own private blog and not a corporate one, my opinions are mine only and do not reflect in any way my employer&rsquo;s. Ok, done.</p>
+            <p>Aside from the pure development stuff, part of my job is to preach and teach the best practices, and help our individuals grow, and our teams to scale. I read blogs daily, and for once want to be part of the blogosphere too, and log my thoughts somewhere. On a more personal note, I want to try to give something back to the community. I am considering participating in some open source projects, but that&rsquo;s not nearly clear enough for now. Anyway, this is the reasons I am starting this blog, as a way to store in the open what I have learned. And if it could even help someone someday, it would be a great reward.</p>
+            <p>Ok, enough with this, let&rsquo;s talk tech!</p>
+            <h3 id="the-blog-s-stack">The blog&rsquo;s stack</h3>
+            <p>I&rsquo;ve come accross a great post by Matt Fisher, very appropriately called  <em><a href="https://blog.bacongobbler.com/post/2018-03-09-blogging-for-pennies-on-azure/index.html">Blogging for pennies on Azure</a></em>. As the title says it, Matt explains how to host a blog on Azure, and I pretty much followed his tutorial to get this site up.</p>
+            <p>In brief, this is how it all work :</p>
+            <ul>
+            <li>The blog&rsquo;s content is stored as markdown files. There isn&rsquo;t a database where I put my thoughts through a WYSIWYG interface, nor HTML pages with static content included and edited by hand. I&rsquo;m writing it through VS Code with the mardown preview enabled, but any editor works. <a href="https://github.com/t-dambacher/blog/blob/master/content/blog/2019-04/introducing.md">Here is even the content</a> of this very own post!
+            <img src="https://www.dambacher.fr/img/blog/thats-not-enough-we-need-to-go-deeper.jpg" alt="Blog-ception" title="Blog-ception" class="mx-auto d-block" style="width: 50%;"></li>
+            <li>I use Github to store the content. This allows me to have all benefits of a distributed VCS: I can write from anywhere (like the bathtub), save what I&rsquo;ve written, and continue the next day on another computer. I&rsquo;ll forever have access to all revisions and could see what changed. I&rsquo;m even able to ask someone to proof-read me before publishing in a <em>code reviews</em> fashion, with a pull request. For a techie, this is a great way to work!</li>
+            <li>Once written, the content goes through <a href="https://gohugo.io/">Hugo</a>, a <em>static website generator</em>. This means that my blog is fully static and does not need a backend with a runtime to interact with. Hugo is the CMS-like part, where I define the visual style of my blog, and create reusable layouts and partial views. As it&rsquo;s <em>very</em> fast to generate the output, I can see the result of my work instantly.<br />
+            Hugo comes with a lot of features and templates, so you can start blogging quickly and don&rsquo;t have to start from scratch; those template are also available on Github, and I reference mine as a submodule, so I&rsquo;m able to get the new changes automatically on checkout.</li>
+            <li>I added <em>Continuous Delivery</em> support through an Azure Pipeline, which triggers a full build at each commit on the <em>master</em> branch of the blog&rsquo;s git repository. Azure checks out the full content, runs it through Hugo, and pushes the generated html and the other resources to an Azure Storage Account through the <code>AzCopy</code> command line tool.</li>
+            <li>The data are stored in Blob Storage, which is a cloud mechanism to store any data in binary blobs. The files are typically manipulated through a REST API, but Microsoft added a feature called <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website-host"><em>static website</em></a>, which allows the download of a file with a standard GET request instead of posting some JSON to a REST endpoint. It also allows the use of a default file while querying the account&rsquo;s endpoint, so when someone make a request to <code>myfunnyblog.onazure.blabla.com</code>, instead of returning a 404 as this isn&rsquo;t an URL pointing to a file, it returns the default <code>index.html</code> file. Put in other words, the <em>static website</em> feature simply allows a browser to access the files.</li>
+            <li>An Azure CDN is used as a safe net just in case one day, thousand of people will read me. More seriously, it&rsquo;s where the SSL certificate is defined, automatically. A rule also redirects some requests to HTTPS.</li>
+            <li>Finally, the domain I use to hide all the partially ugly URLs is registered to <a href="https://ovh.com">OVH</a>, and is also configured to do some <em>http to https</em> redirection at the domain level.</li>
+            </ul>
+          <p>The best thing is that all of this has been deployed in less than a day, without much issues. I only encountered some problems with the <em>http to https</em> redirection and only because I wasn&rsquo;t patient enough, as the DNS weren&rsquo;t propagating as fast as I would have wanted. Once I waited a bit, it all worked great.</p>
+          <p>It also didn&rsquo;t cost much, as the one and only thing I need to pay for is the domain. The Azure subscription works in a <em>pay as you go</em> manner, which means that I pay based on the consumption of what is deployed in Azure. The Storage is charged based on the size of my files, and costs 0,002€ per GB per month; as I only have a few KB of text and MB of images, it&rsquo;s basically free. The CDN is charged based on the volume of data transferred to the consummers of the CDN endpoints, so the more visits my blog have, the more it costs me, at something like 0,2€ per GB per month. As long as I&rsquo;m not famous, it&rsquo;s basically free.</p>
+          <p>So here you have, I&rsquo;m <em>blogging for pennies</em>. What really excites me is the whole <em>cloud</em> and <em>open-source</em> logic: there isn&rsquo;t anything on my side, no physical machine, no backup, no static IP, no database. There&rsquo;s no SaaS CMS (think <em>Wordpress</em>) either. Just free softwares, inteconnected and working only when needed, and the underlying stuff is deported to cloud providers, and is hopefully optimised to do things in an efficient manner. I can only imagine what can be done with such a modern architecture on a more complex app. It&rsquo;s a great time to be a developer!</p>
+          </article>
         </div>
       </div>
-    </div>
+    </main>
 
     <footer class="page-footer text-center font-small mt-4 wow fadeIn">
       <div class="pb-2 mt-5 pt-5">
