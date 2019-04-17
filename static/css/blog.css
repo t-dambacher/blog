@@ -2,6 +2,13 @@
     text-align: justify !important;
 }
 
+main.post-main-wrapper div.container {
+    margin-right: auto !important;
+    margin-left: auto !important;
+
+    padding: 5.5% 8.4% !important;
+}
+
 @media all and (max-width: 500px) {
     .post-main-wrapper {
         margin: 1rem 0 0 0;
