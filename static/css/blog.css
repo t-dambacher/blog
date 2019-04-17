@@ -3,10 +3,11 @@
 }
 
 main.post-main-wrapper div.container {
-    margin-right: auto !important;
-    margin-left: auto !important;
-
+    margin: 0 auto !important;
     padding: 5.5% 8.4% !important;
+}
+div.post-header {
+    margin-bottom: 3rem !important;
 }
 
 @media all and (max-width: 500px) {

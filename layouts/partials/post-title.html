@@ -1,0 +1,13 @@
+<h2 class="px-4 post-heading post-header text-center">{{ .Title }}</h2>
+<div class="post-header text-center" >
+  <ul class="post-meta li-x mt-1">
+    {{ if and .Site.Params.dateformfull .Site.Params.dateform }}
+      <li><time datetime='{{ .Date.Format }}'>{{ .Date.Format .Site.Params.dateform }}</time></li>
+    {{ else }}
+      <li>{{ .Date.Format "Jan 2, 2006" }}</li>
+    {{ end }}
+    {{ if not .Site.Params.noshowreadtime }}
+      <li>{{ i18n "readingTime" .ReadingTime }}</li>
+    {{ end }}
+  </ul>
+</div>
